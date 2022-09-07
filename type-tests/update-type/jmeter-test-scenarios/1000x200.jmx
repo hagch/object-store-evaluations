@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5-SNAPSHOT 8ecf734">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Object Store Update Type 1000/200" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="setUp Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </SetupThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;id&quot;:null,&#xd;
+   &quot;name&quot;: &quot;test&quot;,&#xd;
+   &quot;additionalProperties&quot;:true,&#xd;
+   &quot;backendKeyDefinitions&quot;:[&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;primary&quot;,&#xd;
+         &quot;type&quot;:&quot;primaryKey&quot;,&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;nestedObject&quot;,&#xd;
+         &quot;type&quot;:&quot;object&quot;,&#xd;
+         &quot;properties&quot;:[&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;1property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;2property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;3property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;4property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;5property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;nestedObject2&quot;,&#xd;
+               &quot;type&quot;:&quot;object&quot;,&#xd;
+               &quot;properties&quot;:[&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;1property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;2property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;3property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;4property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;5property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  }&#xd;
+               ],&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:false,&#xd;
+               &quot;additionalProperties&quot;:false&#xd;
+            }&#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;primitiveArray&quot;,&#xd;
+         &quot;type&quot;:&quot;array&quot;,&#xd;
+         &quot;primitiveArrayType&quot;:&quot;string&quot;,&#xd;
+         &quot;properties&quot;:[&#xd;
+            &#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false,&#xd;
+         &quot;additionalItems&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;objectArray&quot;,&#xd;
+         &quot;type&quot;:&quot;array&quot;,&#xd;
+         &quot;primitiveArrayType&quot;:null,&#xd;
+         &quot;properties&quot;:[&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;1propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;2propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;3propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;4propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;5propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;arraynestedObject2&quot;,&#xd;
+               &quot;type&quot;:&quot;object&quot;,&#xd;
+               &quot;properties&quot;:[&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;1propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;2propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;3propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;4propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;5propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  }&#xd;
+               ],&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:false,&#xd;
+               &quot;additionalProperties&quot;:false&#xd;
+            }&#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false,&#xd;
+         &quot;additionalItems&quot;:false&#xd;
+      }&#xd;
+   ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">types</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">type_id</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Connection</stringProp>
+                <stringProp name="Header.value">keep-alive</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="true">
+            <stringProp name="BeanShellAssertion.query">props.put(&quot;type_id&quot;, vars.get(&quot;type_id&quot;));</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">prev.setIgnore()</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group Update Type" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1000</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">200</stringProp>
+        </LoopController>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">vars.put(&quot;type_id&quot;, &apos;&quot;&apos;+props.get(&quot;type_id&quot;)+&apos;&quot;&apos;);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Type Name Counter" enabled="true">
+            <stringProp name="CounterConfig.start">1</stringProp>
+            <stringProp name="CounterConfig.end">200001</stringProp>
+            <stringProp name="CounterConfig.incr">1</stringProp>
+            <stringProp name="CounterConfig.name">type_name_counter</stringProp>
+            <stringProp name="CounterConfig.format"></stringProp>
+            <boolProp name="CounterConfig.per_user">false</boolProp>
+          </CounterConfig>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+&quot;type&quot;:	{&#xd;
+   &quot;id&quot;:${type_id},&#xd;
+   &quot;name&quot;: &quot;test&quot;,&#xd;
+   &quot;additionalProperties&quot;:true,&#xd;
+   &quot;backendKeyDefinitions&quot;:[&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;primary&quot;,&#xd;
+         &quot;type&quot;:&quot;primaryKey&quot;,&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;nestedObject&quot;,&#xd;
+         &quot;type&quot;:&quot;object&quot;,&#xd;
+         &quot;properties&quot;:[&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;1property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;2property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;3property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;4property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;5property&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;nestedObject2&quot;,&#xd;
+               &quot;type&quot;:&quot;object&quot;,&#xd;
+               &quot;properties&quot;:[&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;1property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;2property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;3property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;4property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;5property2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  }&#xd;
+               ],&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:false,&#xd;
+               &quot;additionalProperties&quot;:false&#xd;
+            }&#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;primitiveArray&quot;,&#xd;
+         &quot;type&quot;:&quot;array&quot;,&#xd;
+         &quot;primitiveArrayType&quot;:&quot;string&quot;,&#xd;
+         &quot;properties&quot;:[&#xd;
+            &#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false,&#xd;
+         &quot;additionalItems&quot;:false&#xd;
+      },&#xd;
+      {&#xd;
+         &quot;key&quot;:&quot;objectArray&quot;,&#xd;
+         &quot;type&quot;:&quot;array&quot;,&#xd;
+         &quot;primitiveArrayType&quot;:null,&#xd;
+         &quot;properties&quot;:[&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;1propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;2propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;3propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;4propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;5propertyobjectArray&quot;,&#xd;
+               &quot;type&quot;:&quot;string&quot;,&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:true&#xd;
+            },&#xd;
+            {&#xd;
+               &quot;key&quot;:&quot;arraynestedObject2&quot;,&#xd;
+               &quot;type&quot;:&quot;object&quot;,&#xd;
+               &quot;properties&quot;:[&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;1propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;2propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;3propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;4propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  },&#xd;
+                  {&#xd;
+                     &quot;key&quot;:&quot;5propertyobjectArray2&quot;,&#xd;
+                     &quot;type&quot;:&quot;string&quot;,&#xd;
+                     &quot;isNullAble&quot;:false,&#xd;
+                     &quot;isUnique&quot;:true&#xd;
+                  }&#xd;
+               ],&#xd;
+               &quot;isNullAble&quot;:false,&#xd;
+               &quot;isUnique&quot;:false,&#xd;
+               &quot;additionalProperties&quot;:false&#xd;
+            }&#xd;
+         ],&#xd;
+         &quot;isNullAble&quot;:false,&#xd;
+         &quot;isUnique&quot;:false,&#xd;
+         &quot;additionalProperties&quot;:false,&#xd;
+         &quot;additionalItems&quot;:false&#xd;
+      }&#xd;
+   ]&#xd;
+},&#xd;
+&quot;objects&quot;: []&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">localhost</stringProp>
+            <stringProp name="HTTPSampler.port">8080</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">types/${__P(type_id)}</stringProp>
+            <stringProp name="HTTPSampler.method">PUT</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Connection</stringProp>
+                  <stringProp name="Header.value">keep-alive</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Responses 1000 Users with 200 Requests" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="RespTimeGraph.interval">100</stringProp>
+          <stringProp name="RespTimeGraph.graphtitle">Responses 5 Users with 200 Requests</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
