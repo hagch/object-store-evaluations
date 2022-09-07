@@ -1,0 +1,46 @@
+2022-08-28 18:59:08,703 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2022-08-28 18:59:08,735 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2022-08-28 18:59:08,736 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2022-08-28 18:59:08,744 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2022-08-28 18:59:08,744 INFO o.a.j.JMeter: Version 5.5-SNAPSHOT 8ecf734
+2022-08-28 18:59:08,744 INFO o.a.j.JMeter: java.version=17.0.1
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: os.name=Linux
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: os.arch=amd64
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: os.version=5.15.0-46-generic
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: file.encoding=UTF-8
+2022-08-28 18:59:08,745 INFO o.a.j.JMeter: java.awt.headless=null
+2022-08-28 18:59:08,746 INFO o.a.j.JMeter: Max memory     =8589934592
+2022-08-28 18:59:08,746 INFO o.a.j.JMeter: Available Processors =6
+2022-08-28 18:59:08,757 INFO o.a.j.JMeter: Default Locale=English (United States)
+2022-08-28 18:59:08,758 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2022-08-28 18:59:08,758 INFO o.a.j.JMeter: JMeterHome=/media/sf_DevBoxShare/end-tests/apache-jmeter-5.5-SNAPSHOT
+2022-08-28 18:59:08,758 INFO o.a.j.JMeter: user.dir  =/media/sf_DevBoxShare/end-tests/apache-jmeter-5.5-SNAPSHOT/bin
+2022-08-28 18:59:08,759 INFO o.a.j.JMeter: PWD       =/media/sf_DevBoxShare/end-tests/apache-jmeter-5.5-SNAPSHOT/bin
+2022-08-28 18:59:08,759 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: devbox FullName: devbox
+2022-08-28 18:59:08,923 INFO o.a.j.JMeter: Setting LAF to: laf:javax.swing.plaf.metal.MetalLookAndFeel
+2022-08-28 18:59:09,096 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2022-08-28 21:20:42,169 INFO o.a.j.s.FileServer: Default base='/media/sf_DevBoxShare/end-tests/apache-jmeter-5.5-SNAPSHOT/bin'
+2022-08-28 21:20:42,175 INFO o.a.j.g.a.Load: Loading file: /media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios/500x200.jmx
+2022-08-28 21:20:42,175 INFO o.a.j.s.FileServer: Set new base='/media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios'
+2022-08-28 21:20:42,408 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2022-08-28 21:20:42,422 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2022-08-28 21:20:42,424 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2022-08-28 21:20:42,426 INFO o.a.j.s.SaveService: Loading file: /media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios/500x200.jmx
+2022-08-28 21:20:42,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-08-28 21:20:42,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-08-28 21:20:42,460 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-08-28 21:20:42,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2022-08-28 21:20:42,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2022-08-28 21:20:42,461 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2022-08-28 21:20:42,964 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2022-08-28 21:20:42,965 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2022-08-28 21:20:42,965 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2022-08-28 21:20:42,965 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2022-08-28 21:20:43,153 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-08-28 21:20:43,282 INFO o.a.j.s.FileServer: Set new base='/media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios'
+2022-08-28 21:26:22,794 INFO o.a.j.g.a.Load: Loading file: /media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios/1000x200.jmx
+2022-08-28 21:26:22,794 INFO o.a.j.s.FileServer: Set new base='/media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios'
+2022-08-28 21:26:22,795 INFO o.a.j.s.SaveService: Loading file: /media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios/1000x200.jmx
+2022-08-28 21:26:22,845 INFO o.a.j.v.ViewResultsFullVisualizer: Add JavaFX to your Java installation if you want to use renderer: org.apache.jmeter.visualizers.RenderInBrowser
+2022-08-28 21:26:22,897 INFO o.a.j.s.FileServer: Set new base='/media/sf_DevBoxShare/end-tests/type-tests/delete-type/jmeter-test-scenarios'
